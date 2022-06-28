@@ -48,8 +48,8 @@ module Sprockets
     end
 
     def add_required(input)
-      path = input[:environment].resolve("sprockets/commonjs.js")
-      'file://%s?type=application/javascript' % path
+      uri, _ = input[:environment].resolve("sprockets/commonjs.js")
+      uri
     end
 
     def namespace
